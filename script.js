@@ -26,7 +26,7 @@ function showTime(event) {
 
     if (event.target.value === "unitedKingdom") {
       let ukTime = moment().tz("Etc/GMT").format("dddd, MMMM D, YYYY h:m A");
-      alert(`It is ${ukTime} in the United Kingdom`);
+      alert(`It is ${ukTime} in the London, United Kingdom`);
     }
   }
 }

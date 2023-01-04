@@ -7,20 +7,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>World Clock</title>
+    <title>World Clock - Samin Dizna</title>
   </head>
   <body>
-    <h1>World Clock</h1>
-    <label for="clock">World Clock</label>
-    <select id="clock">
-      <option value="">Select a City</option>
-      <option value="paris">Paris</option>
-      <option value="milan">Milan</option>
-      <option value="atlanta">Atlanta</option>
-      <option value="orlando">Orlando</option>
-      <option value="unitedKingdom">United Kingdom</option>
-    </select>
+    <div class="container">
+      <h1>World Clock</h1>
 
+      <select id="clock">
+        <option value="">Select a city</option>
+        <option value="paris">Paris</option>
+        <option value="milan">Milan</option>
+        <option value="atlanta">Atlanta</option>
+        <option value="orlando">Orlando</option>
+        <option value="unitedKingdom">London</option>
+      </select>
+    </div>
+
+    <div class="city">
+      <h2>City</h2>
+      <div class="date">00/00/00</div>
+      <div class="time">00:00</div>
+    </div>
     <footer>
       <a href="https://github.com/samxn/world-clock" target="_blank"
         >Open-source code</a
