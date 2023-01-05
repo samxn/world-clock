@@ -1,3 +1,17 @@
+function updateTime() {
+  // city 1
+  let city1Element = document.querySelector("#city1");
+  let city1DateElement = city1Element.querySelector(".date");
+  let city1TimeElement = city1Element.querySelector(".time");
+
+  let city1 = moment().tz("Europe/Paris");
+
+  city1DateElement.innerHTML = city1.format("MMMM Do YYYY");
+  city1TimeElement.innerHTML = city1.format("h:m [<small>]A[</small>]");
+}
+updateTime();
+setInterval(updateTime, 10000);
+
 function showTime(event) {
   if (event.target.value.length > 0) {
     if (event.target.value === "paris") {
