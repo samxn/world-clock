@@ -26,7 +26,7 @@ h1 a {
 }
 h1 a:hover {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.822);
+  color: rgba(0, 0, 0, 0.712);
 }
 h2 {
   margin: 0 0 5px;
@@ -41,7 +41,7 @@ footer a {
 }
 footer a:hover {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.712);
+  color: rgb(0, 0, 0);
 }
 
 select {

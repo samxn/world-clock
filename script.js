@@ -21,6 +21,17 @@ function updateTime() {
     city2DateElement.innerHTML = city2.format("MMMM Do YYYY");
     city2TimeElement.innerHTML = city2.format("h:mm [<small>]A[</small>]");
   }
+  // city 3
+  let city3Element = document.querySelector("#city3");
+  if (city3Element) {
+    let city3DateElement = city3Element.querySelector(".date");
+    let city3TimeElement = city3Element.querySelector(".time");
+
+    let city3 = moment().tz("Atlantic/Bermuda");
+
+    city3DateElement.innerHTML = city3.format("MMMM Do YYYY");
+    city3TimeElement.innerHTML = city3.format("h:mm [<small>]A[</small>]");
+  }
 }
 
 function updateCity(event) {
