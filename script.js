@@ -8,7 +8,7 @@ function updateTime() {
     let city1 = moment().tz("Europe/Paris");
 
     city1DateElement.innerHTML = city1.format("MMMM Do YYYY");
-    city1TimeElement.innerHTML = city1.format("h:m [<small>]A[</small>]");
+    city1TimeElement.innerHTML = city1.format("h:mm [<small>]A[</small>]");
   }
   // city 2
   let city2Element = document.querySelector("#city2");
@@ -19,12 +19,15 @@ function updateTime() {
     let city2 = moment().tz("Australia/Queensland");
 
     city2DateElement.innerHTML = city2.format("MMMM Do YYYY");
-    city2TimeElement.innerHTML = city2.format("h:m [<small>]A[</small>]");
+    city2TimeElement.innerHTML = city2.format("h:mm [<small>]A[</small>]");
   }
 }
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
@@ -34,7 +37,7 @@ function updateCity(event) {
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
-          <div class="time">${cityTime.format("h:m ")}<small>${cityTime.format(
+          <div class="time">${cityTime.format("h:mm ")}<small>${cityTime.format(
     "A"
   )}</small></div>
         </div>
