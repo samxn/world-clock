@@ -5,9 +5,9 @@ function updateTime() {
     let city1DateElement = city1Element.querySelector(".date");
     let city1TimeElement = city1Element.querySelector(".time");
 
-    let city1 = moment().tz("Europe/Paris");
+    let city1 = moment().tz("Europe/Paris"); // https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a for time zones
 
-    city1DateElement.innerHTML = city1.format("MMMM Do YYYY");
+    city1DateElement.innerHTML = city1.format("MMMM Do YYYY"); // https://devhints.io/datetime#momentjs-format format reference
     city1TimeElement.innerHTML = city1.format("h:mm [<small>]A[</small>]");
   }
   // city 2
